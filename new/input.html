@@ -6,7 +6,8 @@
 DATA ENTRY
 </b></p>
 
-<font color="green"># We want to creaet a data provide system with user authentification and payment. The system to be created using AWS. the data for provision are to be extracted from the dataset which are located in the cloud server such as AWS S3 (raster format, in detail). The extraction is made by giving input arguments (such as data id and longitude/latitude) to the data-extraction function which is also to located and run in the cloud computer (I'm thinking of AWS EC2). To acheive this, we at least need to have (1) user authentification system, (2) input log database and its user interface, (3) payment log database and payment interface which triggers the data extraction function to run while sending args to the function, (4) download interface (DASHBOARD). Here the below describes how it should works. It would also be necessary to give each user permission to a directory in S3, and to store the files generated as a result of requests made by a specific user in that directory.</font>
+<font color="green"># We want to create a data provide system with user authentification and payment. The system to be created using AWS. the data for provision are to be extracted from the dataset which are located in the cloud server such as AWS S3 (raster format, in detail). The extraction is made by giving input arguments (such as data id and longitude/latitude) to the data-extraction function which is also to located and run in the cloud computer (I'm thinking of AWS EC2, and python). To achieve this, we at least need to have (1) user authentication system, (2) input log database and its user interface, (3) payment log database and payment interface which triggers the data extraction function to run while sending args to the function, (4) download interface (DASHBOARD). Here the below describes how it should works. It would also be necessary to give each user permission to a directory in S3, and to store the files generated as a result of requests made by a specific user in that directory.<br><br>
+# 日本語：ユーザー認証と決済を伴うデータ提供システムを作りたい。提供するデータは、AWS S3などのクラウドサーバにあるデータセット（ラスタ形式）から抽出する。抽出は、データ抽出関数（pythonで実装される）に入力引数（データIDや経度・緯度など）を与えることで行われる。これを実現するためには、少なくとも(1)ユーザー認証システム、(2)入力ログ・データベースとそのユーザー・インターフェース、(3)支払いログ・データベースと支払いインターフェース、(4)ダウンロード・インターフェース（DASHBOARD）が必要だ。以下はその仕組みである。また、各ユーザにS3のディレクトリへのアクセス権を与え、特定のユーザがリクエストした結果生成されたファイルをそのディレクトリに保存する必要がある。</font>
 
 <p>input_1：<br>
 <input type="text" name="name"></p>
@@ -22,7 +23,8 @@ DATA ENTRY
 
 <p><a href="account.html">button↑ action without login</a> / <a href="confirm.html">with login</a></p>
 
-<font color="green"># the number of input columns should be changeable.<br>
-inputs are stored in the input database table. 
+<font color="green"># The number of input columns should be changeable (datatype is changeable as well; str, int etc.). An interface for inputs will be implemeted separately. Please temporarily place a simple data input form like the one shown above.<br>Inputs are stored in the input database table. 
+<br>#  入力カラムの数は変更可能にしてください（それぞれのデータタイプも可変に）。インプットのためのインターフェースは、別途作成する予定です。上に示すようなシンプルなデータ入力フォームを仮置きしておいてください。<br>入力は入力データベースのテーブルに格納されます。
+
 </font>
 </body>
