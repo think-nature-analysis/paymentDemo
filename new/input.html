@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<p><b>
+DATA ENTRY
+</b></p>
+
+<font color="green"># We want to creaet a data provide system with user authentification and payment. The system to be created using AWS. the data for provision are to be extracted from the dataset which are located in the cloud server such as AWS S3 (raster format, in detail). The extraction is made by giving input arguments (such as data id and longitude/latitude) to the data-extraction function which is also to located and run in the cloud computer (I'm thinking of AWS EC2). To acheive this, we at least need to have (1) user authentification system, (2) input log database and its user interface, (3) payment log database and payment interface, (4) download interface. Here the below describes how it should works. It would also be necessary to give each user permission to a directory in S3, and to store the files generated as a result of requests made by a specific user in that directory.</font>
+
+<p>input_1：<br>
+<input type="text" name="name"></p>
+<p>input_2：<br>
+<input type="text" name="name"></p>
+<p>input_3：<br>
+<input type="text" name="name"></p>
+...
+<p>input_n：<br>
+<input type="text" name="name"></p>
+
+<p><input type="button" value="Buy" id="button2"></p>
+
+<p><a href="account.html">button action without login</a> / <a href="confirm.html">with login</a></p>
+
+<font size=1># the number of input columns should be changeable.<br>
+inputs are stored in the input database table. 
+</font>
+</body>

@@ -1,0 +1,62 @@
+.lister {
+width:600px; height:100px;
+margin:5px; padding:10px; border:1px solid black;
+background-color:lightgray;
+display:flex;
+} 
+
+.listerd {
+width:800px; height:100px;
+margin:5px; padding:10px; border:1px solid black;
+background-color:lightgray;
+display:flex;
+} 
+
+.bigmap {
+width:600px; height:300px;
+margin:5px; padding:10px; border:1px solid black;
+background-color:lightgray;
+display:flex;
+} 
+
+.confmmap {
+width:400px; height:240px;
+margin:5px; padding:10px; border:1px solid black;
+background-color:lightgray;
+display:flex;
+} 
+
+centerexp{
+vertical-align: middle;
+text-align: center;
+}
+
+.inim {
+width:150px; height:90px;
+background-color:blue;
+} 
+
+.inim2 {
+width:400px; height:90px;
+background-color:white;
+} 
+
+.inimd0 {
+width:120px; height:90px;
+background-color:grey;
+} 
+
+.inimd {
+width:120px; height:90px;
+background-color:green;
+} 
+
+.inimd2 {
+width:400px; height:90px;
+background-color:white;
+} 
+
+.inimd3 {
+width:120px; height:90px;
+background-color:light-gray;
+} 

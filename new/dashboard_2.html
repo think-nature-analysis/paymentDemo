@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<p><b>
+DASHBOARD
+</b></p>
+<font color="green"># contents are obtained from users input log table [db]. payment status is obtained from use payment log table [db]. This page may be scanning the payment log table to check whether each contents are ready for download.</font>
+
+
+<p>
+[[content1]]|[[payment1]]|<a href="download.html">download</a> <font color="green"># if the payment is done and the file is ready. button starts downloading of the produced file</font>
+</p>
+
+<p>
+[[content2]]|[[payment1]]|file processing <font color="green"># if the payment is done and the file is not ready</font> → <a href="download.html">download</a><font color="green"># ★★★after the file is ready</font>
+</p>
+
+<p>
+[[content3]]|[[payment2]]|file processing <font color="green"># ★★★payment is done!</font>　→ <a href="download.html">download</a><font color="green"># ★★★after the file is ready</font>
+</p>
+
+<p>
+[[content4]]|[[payment2]]|- <font color="green"># multiple contents for a single payment</font>
+</p>
+
+<p>
+[[content5]]|[[payment2]]|- <font color="green"># multiple contents for a single payment</font>
+</p>
+
+<p>
+[[content6]]|[[payment3]]|<a href="download.html">download</a> <font color="green"># if the payment is done and the file is ready</font>
+</p>
+
+
+<p>
+<font color="green">#Report are to be added below.</font>
+</p>
+
+<font color="green"># ↓payment logs should be stored</font>
+<br>
+<img src="demos/004.png" width="500">
+
+
+</body>

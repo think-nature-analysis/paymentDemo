@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<p><b>
+DASHBOARD
+</b></p>
+<font color="green"># contents are obtained from users input log table [db]. payment status is obtained from use payment log table [db]. This page may be scanning the payment log table to check whether each contents are ready for download.</font>
+
+
+
+<p>
+[[content1]]||[[payment1]]|<a href="download.html">download</a> <font color="green"># if the payment is done and the file is ready. button starts downloading of the produced file</font>
+</p>
+
+<p>
+[[content2]]|[[payment1]]|file processing <font color="green"># if the payment is done and the file is not ready</font>
+</p>
+
+<p>
+[[content3]]|[[payment2]]|<a href="payment.html">pay</a>|<a href="cancell.html">cancel</a> <font color="green"># if the payment is not done. the unpaid content list have cancell button which adds "-1" request in the input log table (see below).</font>
+</p>
+
+<p>
+[[content4]]|[[payment2]]|- <font color="green"># multiple contents for a single payment</font>
+</p>
+
+<p>
+[[content5]]|[[payment2]]|- <font color="green"># multiple contents for a single payment</font>
+</p>
+
+<p>
+[[content6]]|[[payment3]]|<a href="download.html">download</a> <font color="green"># if the payment is done and the file is ready</font>
+</p>
+
+
+<p>
+<font color="green">#Report are to be added below.</font>
+</p>
+
+<font color="green">#↓how inputs should be parsed into contents</font>
+<br>
+<img src="demos/002.png" width="500">
+
+
+
+
+</body>
