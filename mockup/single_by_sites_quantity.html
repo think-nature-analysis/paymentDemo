@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+        <html>
+           <head>
+              <title>Quantity</title>
+              <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+           </head><body>
+
+<style>
+
+body {
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+comme{
+color: green;
+}
+
+.locationsinput{
+width: 150px;
+height: 300px;
+}
+
+td{
+vertical-align: middle;
+padding: 10px;
+}
+
+.kadomaru-btn{
+    width: 300px;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: 10px;
+    background-color: #88abda;
+    color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    border-radius: 46px;/*想定の最大の高さ÷2の値を入れておく。例は最大3行想定*/
+}
+.kadomaru-btn:hover{
+    background-color: #9bbce8;
+}
+
+.kadomaru-btn2{
+    width: 300px;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: 10px;
+    background-color: #abda88;
+    color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    border-radius: 5px;/*想定の最大の高さ÷2の値を入れておく。例は最大3行想定*/
+}
+.kadomaru-btn2:hover{
+    background-color: #bce89b;
+}
+
+</style>
+
+
+<p>選択したデータ: <mark>Biodiversity Intactness</mark></p>
+
+<p>
+</p>
+<p>
+以下の地図をクリックして位置を指定する
+<comme>#データが欠損している点が選択不可になるようにフィルタリングする必要がある：少し考えないといけない</comme>
+</p>
+<div id = "map" style = "width: 500px; height: 300px"></div><script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<table>
+    <tr>
+<td>
+
+<p>Locations</p>
+        <form action="" class="form">
+            <textarea type="text" id="locations" class="locationsinput" placeholder="locations"></textarea>
+        </form>
+
+</td>
+
+<td>
+
+You have chosen <input type="text" id="ordern" name="ordern"/ style="width: 50px;" readonly="readonly"> locations.
+
+<p><font size="1"><br></font>
+<a href="payment.html" class="kadomaru-btn">Proceed to Checkout</a>
+</p>
+<br>
+<br>
+<a href="temp/your_locations.csv" class="kadomaru-btn2" target="_blank" download>Save Locations</a><br><br>
+<a href="" class="kadomaru-btn2">Import Locations</a>
+</td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+              <script>
+                 // Creating map options
+                 var mapOptions = {
+                    center: [17.385044, 78.486671],
+                    zoom: 10
+                 }
+                 
+                 // Creating a map object
+                 var map = new L.map('map', mapOptions);
+                 
+                 // Creating a Layer object
+                 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+                 
+                 // Adding layer to the map
+                 map.addLayer(layer);
+
+let marker = null;
+map.on('click', (event)=> {
+
+    if(marker !== null){
+        map.removeLayer(marker);
+    }
+
+    marker = L.marker([event.latlng.lat , event.latlng.lng]).addTo(map);
+    document.getElementById('locations').value = document.getElementById('locations').value + Math.round(event.latlng.lat*1000)/1000 + "," + Math.round(event.latlng.lng*1000)/1000 + "\n";
+    document.getElementById('ordern').value = document.getElementById('locations').value.split("\n").length - 1;
+    
+})
+
+
+
+              </script>
+           </body>
+           
+        </html>

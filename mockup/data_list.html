@@ -1,0 +1,105 @@
+<html>
+<head><title>Data list</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<style>
+
+
+
+body {
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+ul, ol {
+  padding: 0;
+  position: relative;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px 6%;
+}
+
+ul li, ol li {
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+   line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
+
+tL {
+  background-color: #ff00ff;
+  color: white;
+}
+
+tE {
+  background-color: #009999;
+  color: white;
+}
+
+tA {
+  background-color: #999900;
+  color: white;
+}
+
+comme{
+color: green;
+}
+
+terre {
+  background-color: #005500;
+  color: white;
+}
+
+marine {
+  background-color: #0000FF;
+  color: white;
+}
+
+
+</style>
+
+<b>データ一覧</b>
+<br>
+<comme>#データの検索ツールをここに配置</comme><br>
+<comme>#このページに表示されるリストが、一般的なECサイトにおける商品バリエーションリストに相当：レポート＝商品タイプ（Tシャツとかジャンバーとか）を別の場所で選んだとして、<a href="https://www.bellemaison.jp/shop/commodity/0000/1231417/?SHNCRTTKKRO_KBN=R6&AR_SPEC=pc311&AR_RQID=740378352">その色やサイズを選ぶ</a>部分に対応</comme><br>
+<comme>#このページは、データカタログとしても使える。このページでデータを選ぶとSingle Layer Report (by sites)という商品を選んだものとしてページが遷移する、という仕様にしておき、トップページからこのページに直で飛べるのもありか。</comme>
+
+<ul>
+<li><a href="layersinfo/biodiversity_intactness.html">Biodiversity Intactness</a><br>
+2023/08/11 | 10arcmin | Biodiversty | <terre>terrestrial</terre> | <br> <tL>L2</tL> <tL>L3</tL>
+</li>
+
+<li><a href="">Biodiversity Importance (vertebrates and trees integrated)</a><br>
+2023/08/11 | 10arcmin | Biodiversty | <terre>terrestrial</terre> | <br> <tL>L3</tL> <tA>A1</tA>
+</li>
+
+<li><a href="layersinfo/marine_biodiversity_importance_integrated.html">Marine Biodiversity Importance (integrated)</a><br>
+2023/08/11 | 10arcmin | Biodiversty | <marine>marine</marine> | <br> <tL>L3</tL> <tA>A1</tA>
+</li>
+
+<li><a href="">Rooting Depth</a><br>
+2023/08/11 | 10arcmin | Ecosystem Service | <terre>terrestrial</terre> |  <br> <tE>E1</tE>
+</li>
+
+<li><a href="">HCB emission avg. 2016-18</a><br>
+2023/08/11 | 10arcmin | Impact Driver |  <terre>terrestrial</terre> | <br> <tL>L3</tL> <tE>E1</tE> <tA>A1</tA>
+</li>
+
+<li><a href="">Biome Types</a><br>
+2023/08/11 | Shp | Biome etc. | <terre>terrestrial</terre> | <br> <tL>L1</tL> <tL>L2</tL>
+</li>
+
+<comme>#以下、データの数だけたくさん続く</comme>
+
+</ul>
+
+
+
+
+
+
+</body>

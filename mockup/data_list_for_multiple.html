@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+        <html>
+           <head>
+              <title>Quantity</title>
+              <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+           </head><body>
+
+<style>
+
+body {
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+comme{
+color: green;
+}
+
+.locationsinput{
+width: 150px;
+height: 300px;
+}
+
+td{
+vertical-align: middle;
+padding: 10px;
+}
+
+.kadomaru-btn{
+    width: 300px;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: 10px;
+    background-color: #88abda;
+    color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    border-radius: 46px;/*想定の最大の高さ÷2の値を入れておく。例は最大3行想定*/
+}
+.kadomaru-btn:hover{
+    background-color: #9bbce8;
+}
+
+.kadomaru-btn2{
+    width: 300px;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: 10px;
+    background-color: #abda88;
+    color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    border-radius: 5px;/*想定の最大の高さ÷2の値を入れておく。例は最大3行想定*/
+}
+.kadomaru-btn2:hover{
+    background-color: #bce89b;
+}
+
+form{
+font-size: 18px;
+}
+
+option{
+font-size: 15px;
+}
+
+select{
+font-size: 15px;
+}
+
+.slct{
+border: solid;
+width: 800px;
+}
+
+h2{
+color: darkblue;
+}
+
+</style>
+
+<h2>Data selection</h2>
+<div class="slct">
+<form action="#">
+      <label for="lang">Layer</label>
+      <select name="languages" id="lang">
+        <option value="1">Biodiversity Importance (trees and vertebrates integrated)</option>
+        <option value="2">STAR (Endangered Mammal)</option>
+        <option value="3">Precitipation change 100 year</option>
+        <option value="4">Human Footprint (2009)</option>
+      </select>
+</form>
+        <div id="target">
+            <div>
+<form action="#">
+      <label for="lang">Layer</label>
+      <select name="languages" id="lang">
+        <option value="2">STAR (Endangered Mammal)</option>
+        <option value="3">Precitipation change 100 year</option>
+        <option value="4">Human Footprint (2009)</option>
+        <option value="1">Biodiversity Importance (trees and vertebrates integrated)</option>
+      </select>
+</form>
+            </div>
+        </div>
+
+<button id="add">Add more layers</button>
+</div>
+
+        
+        <script type="text/javascript">
+            // 要素をコピー＆追加する関数
+            function addExample() {
+                let elements = document.getElementById("target");
+                let copied = elements.lastElementChild.cloneNode(true);
+                elements.appendChild(copied);
+            }
+            
+            // ボタンにイベントハンドラをセット
+            const btn = document.getElementById("add");
+            btn.addEventListener("click", addExample, false);
+            
+        </script>
+
+<p>
+</p>
+
+<br><br><br>
+<a href="data_list_for_multiple_quantify.html" class="kadomaru-btn">Select Locations</a>
+
+
+           </body>
+           
+        </html>
